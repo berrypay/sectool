@@ -6,7 +6,7 @@
     "authorEmail": "sallehuddin@berrypay.com",
     "blankLinesAfter": 1,
     "spacesBetweenYears": false,
-    "license": "Custom",
+    "license": "MIT",
     "company": "BerryPay (M) Sdn. Bhd.",
     "copyrightHolder": "BerryPay (M) Sdn. Bhd.",
     "creationDateZero": "asIs"
@@ -30,7 +30,11 @@
       "./Dockerfile",
       "./.gitlab-ci.yml",
       "./netrc",
-      "./certs/*"
+      "./certs/*",
+      "./*.csr",
+      "./*.key",
+      "./*.pem",
+      "./*.crt",
     ],
     "autoHeader": "autoSave",
     "enforceHeader": true,
@@ -93,6 +97,9 @@
     }
   ],
   "cSpell.words": [
-    "sectool"
+    "appsec",
+    "OAEP",
+    "sectool",
+    "sijil"
   ],
 }
