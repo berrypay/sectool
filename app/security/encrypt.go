@@ -5,7 +5,7 @@
  * Author: Sallehuddin Abdul Latif (sallehuddin@berrypay.com)
  * Company: BerryPay (M) Sdn. Bhd.
  * --------------------------------------
- * Last Modified: Friday September 1st 2023 15:52:36 +0800
+ * Last Modified: Saturday September 2nd 2023 10:36:45 +0800
  * Modified By: Sallehuddin Abdul Latif (sallehuddin@berrypay.com)
  * --------------------------------------
  * Copyright (c) 2023 BerryPay (M) Sdn. Bhd.
@@ -15,6 +15,7 @@ package security
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/berrypay/appsec"
 	"github.com/berrypay/sectool/app"
@@ -31,11 +32,13 @@ func Encrypt(secret string) {
 	err := appsec.LoadPublicKey(viper.GetString(app.CERT_FLAG))
 	if err != nil {
 		fmt.Printf("Error loading public key: %s\n", err.Error())
+		os.Exit(1)
 	}
 
 	cipherText, err := appsec.EncryptOAEP(secret, viper.GetString(app.OAEP_LABEL_FLAG))
 	if err != nil {
 		fmt.Printf("Error encrypting secret: %s\n", err.Error())
+		os.Exit(2)
 	}
 
 	if viper.GetBool(app.DEBUG_FLAG) {
