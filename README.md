@@ -23,7 +23,7 @@ Sectool is a set of tools for setting up application security components such as
    foo@bar:~$ make
    ```
 
-4. Use the tool
+## Usage
 
    ```console
    foo@bar:~$ ./sectool -h
