@@ -5,7 +5,7 @@
  * Author: Sallehuddin Abdul Latif (sallehuddin@berrypay.com)
  * Company: BerryPay (M) Sdn. Bhd.
  * --------------------------------------
- * Last Modified: Saturday September 2nd 2023 10:37:20 +0800
+ * Last Modified: Tuesday September 5th 2023 12:20:13 +0800
  * Modified By: Sallehuddin Abdul Latif (sallehuddin@berrypay.com)
  * --------------------------------------
  * Copyright (c) 2023 BerryPay (M) Sdn. Bhd.
@@ -14,7 +14,6 @@
 package security
 
 import (
-	"crypto/rsa"
 	"fmt"
 	"os"
 
@@ -22,8 +21,6 @@ import (
 	"github.com/berrypay/sectool/app"
 	"github.com/spf13/viper"
 )
-
-var AppPublicKey *rsa.PublicKey
 
 func Decrypt(cipher string) {
 	if viper.GetBool(app.DEBUG_FLAG) {

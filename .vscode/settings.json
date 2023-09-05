@@ -34,7 +34,7 @@
       "./*.csr",
       "./*.key",
       "./*.pem",
-      "./*.crt",
+      "./*.crt"
     ],
     "autoHeader": "autoSave",
     "enforceHeader": true,
@@ -96,10 +96,5 @@
       "lineLength": 80
     }
   ],
-  "cSpell.words": [
-    "appsec",
-    "OAEP",
-    "sectool",
-    "sijil"
-  ],
+  "cSpell.words": ["AESGCM", "appsec", "OAEP", "sectool", "sijil"]
 }

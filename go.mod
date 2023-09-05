@@ -3,7 +3,7 @@ module github.com/berrypay/sectool
 go 1.20
 
 require (
-	github.com/berrypay/appsec v1.0.4
+	github.com/berrypay/appsec v1.1.0
 	github.com/spf13/cobra v1.7.0
 	github.com/spf13/viper v1.16.0
 )
